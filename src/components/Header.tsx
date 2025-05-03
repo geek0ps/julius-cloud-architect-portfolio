@@ -28,12 +28,12 @@ const Header: React.FC = () => {
     <header className={cn(
       "fixed top-0 left-0 w-full z-50 transition-all duration-300",
       isScrolled 
-        ? "bg-cloud-700/90 backdrop-blur-md shadow-lg py-3" 
+        ? "bg-white/90 backdrop-blur-md shadow-md py-3" 
         : "bg-transparent py-5"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="text-xl md:text-2xl font-bold text-white flex items-center gap-1">
-          <span className="text-tech-400">Geek</span>Ops<span className="text-tech-400">.</span>dev
+        <a href="#" className="text-xl md:text-2xl font-bold text-gray-800 flex items-center gap-1 font-sans">
+          <span className="text-sky-500">Geek</span>Ops<span className="text-sky-500">.</span>dev
         </a>
 
         {/* Desktop Navigation */}
@@ -42,14 +42,14 @@ const Header: React.FC = () => {
             <a 
               key={link.name}
               href={link.href}
-              className="font-medium text-gray-200 hover:text-tech-400 transition-colors"
+              className="font-medium text-gray-600 hover:text-sky-500 transition-colors"
             >
               {link.name}
             </a>
           ))}
           <a 
             href="#contact"
-            className="px-4 py-2 rounded-md bg-tech-500 text-white font-medium hover:bg-tech-600 transition-colors"
+            className="px-4 py-2 rounded-md bg-sky-500 text-white font-medium hover:bg-sky-600 transition-colors"
           >
             Hire Me
           </a>
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white"
+          className="md:hidden text-gray-800"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -66,13 +66,13 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-cloud-700/95 backdrop-blur-md absolute top-full left-0 w-full shadow-lg">
+        <div className="md:hidden bg-white/95 backdrop-blur-md absolute top-full left-0 w-full shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a 
                 key={link.name}
                 href={link.href}
-                className="py-2 font-medium text-gray-200 hover:text-tech-400 transition-colors"
+                className="py-2 font-medium text-gray-600 hover:text-sky-500 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
             ))}
             <a 
               href="#contact"
-              className="py-2 px-4 rounded-md bg-tech-500 text-white font-medium hover:bg-tech-600 transition-colors text-center"
+              className="py-2 px-4 rounded-md bg-sky-500 text-white font-medium hover:bg-sky-600 transition-colors text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Hire Me

@@ -43,11 +43,11 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-24 bg-gradient-to-b from-white to-cloud-50/50">
+    <section id="projects" className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50/50">
       <div className="container-section">
         <div className="flex flex-col items-center mb-16 text-center">
-          <h2 className="section-title">Featured Projects</h2>
-          <div className="w-16 h-1 bg-tech-400 mb-8"></div>
+          <h2 className="section-title text-gray-800">Featured Projects</h2>
+          <div className="w-16 h-1 bg-sky-500 mb-8"></div>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl">
             These projects showcase my expertise in cloud architecture, DevOps, and platform engineering
           </p>
@@ -59,11 +59,11 @@ const Projects: React.FC = () => {
               key={index} 
               className="relative group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all flex flex-col"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-cloud-500/5 to-tech-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-sky-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               
               <div className="p-6 flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="bg-gradient-to-br from-cloud-100 to-tech-100 p-3 rounded-xl text-tech-600">
+                  <div className="bg-gradient-to-br from-sky-100 to-teal-100 p-3 rounded-xl text-sky-600">
                     <project.icon size={28} />
                   </div>
                 </div>
@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
                         href={project.link} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-tech-500 hover:text-tech-600 p-1"
+                        className="text-sky-500 hover:text-sky-600 p-1"
                       >
                         <ArrowUpRight size={18} />
                       </a>
@@ -91,7 +91,7 @@ const Projects: React.FC = () => {
                     {project.tags.map((tag, tagIndex) => (
                       <span 
                         key={tagIndex}
-                        className="text-xs font-medium px-2 py-1 rounded-full bg-cloud-100 text-cloud-700"
+                        className="text-xs font-medium px-2 py-1 rounded-full bg-sky-100 text-sky-700"
                       >
                         {tag}
                       </span>
