@@ -11,6 +11,7 @@ const Header: React.FC = () => {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -27,12 +28,12 @@ const Header: React.FC = () => {
     <header className={cn(
       "fixed top-0 left-0 w-full z-50 transition-all duration-300",
       isScrolled 
-        ? "bg-white/90 backdrop-blur-md shadow-sm py-3" 
+        ? "bg-cloud-700/90 backdrop-blur-md shadow-lg py-3" 
         : "bg-transparent py-5"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="text-xl md:text-2xl font-bold text-cloud-600">
-          Julius<span className="text-tech-500">.Dev</span>
+        <a href="#" className="text-xl md:text-2xl font-bold text-white flex items-center gap-1">
+          <span className="text-tech-400">Geek</span>Ops<span className="text-tech-400">.</span>dev
         </a>
 
         {/* Desktop Navigation */}
@@ -41,14 +42,14 @@ const Header: React.FC = () => {
             <a 
               key={link.name}
               href={link.href}
-              className="font-medium text-gray-700 hover:text-tech-500 transition-colors"
+              className="font-medium text-gray-200 hover:text-tech-400 transition-colors"
             >
               {link.name}
             </a>
           ))}
           <a 
             href="#contact"
-            className="px-4 py-2 rounded-md bg-cloud-500 text-white font-medium hover:bg-cloud-600 transition-colors"
+            className="px-4 py-2 rounded-md bg-tech-500 text-white font-medium hover:bg-tech-600 transition-colors"
           >
             Hire Me
           </a>
@@ -56,7 +57,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-gray-700"
+          className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,13 +66,13 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white absolute top-full left-0 w-full shadow-md">
+        <div className="md:hidden bg-cloud-700/95 backdrop-blur-md absolute top-full left-0 w-full shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a 
                 key={link.name}
                 href={link.href}
-                className="py-2 font-medium text-gray-700 hover:text-tech-500 transition-colors"
+                className="py-2 font-medium text-gray-200 hover:text-tech-400 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
@@ -79,7 +80,7 @@ const Header: React.FC = () => {
             ))}
             <a 
               href="#contact"
-              className="py-2 px-4 rounded-md bg-cloud-500 text-white font-medium hover:bg-cloud-600 transition-colors text-center"
+              className="py-2 px-4 rounded-md bg-tech-500 text-white font-medium hover:bg-tech-600 transition-colors text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Hire Me

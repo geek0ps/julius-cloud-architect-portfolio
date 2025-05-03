@@ -11,14 +11,14 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#" className="text-2xl font-bold">
-              Julius<span className="text-tech-300">.Dev</span>
+              <span className="text-tech-400">Geek</span>Ops<span className="text-tech-400">.</span>dev
             </a>
             <p className="mt-2 text-cloud-200 max-w-md">
               DevOps Engineer & AWS Cloud Architect specializing in transforming IT infrastructure.
             </p>
           </div>
           
-          <div className="flex flex-wrap gap-4 mb-6 md:mb-0">
+          <div className="flex flex-wrap gap-6 mb-6 md:mb-0">
             <a 
               href="#about"
               className="text-cloud-200 hover:text-white transition-colors"
@@ -36,6 +36,12 @@ const Footer: React.FC = () => {
               className="text-cloud-200 hover:text-white transition-colors"
             >
               Experience
+            </a>
+            <a 
+              href="#projects"
+              className="text-cloud-200 hover:text-white transition-colors"
+            >
+              Projects
             </a>
             <a 
               href="#contact"
@@ -76,7 +82,7 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-cloud-600 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-cloud-300">
-            &copy; {currentYear} Julius Omoleye. All rights reserved.
+            &copy; {currentYear} Julius Omoleye. All rights reserved. <a href="https://geekops.dev" className="text-tech-400 hover:text-tech-300">geekops.dev</a>
           </p>
           <p className="text-sm text-cloud-300 mt-2 md:mt-0">
             DevOps Engineer & AWS Cloud Architect
