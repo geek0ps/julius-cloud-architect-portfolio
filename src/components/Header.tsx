@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Server, Cloud } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Header: React.FC = () => {
@@ -32,8 +32,14 @@ const Header: React.FC = () => {
         : "bg-transparent py-5"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="text-xl md:text-2xl font-bold text-gray-800 flex items-center gap-1 font-sans">
-          <span className="text-sky-500">Geek</span>Ops<span className="text-sky-500">.</span>dev
+        <a href="#" className="text-xl md:text-2xl font-bold flex items-center gap-2 font-heading">
+          <div className="relative flex items-center justify-center">
+            <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 to-sky-600 rounded-full blur-sm"></div>
+            <div className="relative bg-white rounded-full p-1.5">
+              <Server size={20} className="text-sky-500" />
+            </div>
+          </div>
+          <span className="text-gray-800"><span className="text-sky-500">Geek</span>Ops<span className="text-sky-500">.</span>dev</span>
         </a>
 
         {/* Desktop Navigation */}
